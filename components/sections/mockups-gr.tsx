@@ -1,0 +1,65 @@
+import Image from "next/image";
+import { GradientText } from "@/components/ui/gradient-text";
+import { GlassCard } from "@/components/ui/glass-card";
+
+export function Mockups() {
+  return (
+    <section className="relative py-32 overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-background/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_70%)]" />
+      </div>
+      
+      <div className="container relative mx-auto px-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText>Ισχυρά Εργαλεία για Κάθε Πλατφόρμα</GradientText>
+          </h2>
+          <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            Απολαύστε απρόσκοπτη διαχείριση κρατήσεων σε όλες τις συσκευές με την όμορφα σχεδιασμένη εφαρμογή για κινητά και τον πίνακα διαχείρισης.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="relative group">
+            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-r from-white/30 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+            <GlassCard className="relative overflow-hidden p-2">
+              <Image
+                src="https://i.ibb.co/jMzjknF/2024-10-25-3-21-01.png"
+                alt="Mobile Web App Interface"
+                width={500}
+                height={900}
+                className="rounded-xl w-full transform transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <div className="text-white">
+                  <h3 className="text-2xl font-bold mb-2">Mobile Web App</h3>
+                  <p className="text-white/80">Κάντε κρατήσεις εν κινήσει με το διαισθητικό μας περιβάλλον για κινητά</p>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+          
+          <div className="relative group">
+            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-r from-white/30 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+            <GlassCard className="relative overflow-hidden p-2">
+              <Image
+                src="https://i.ibb.co/WkYTGtd/2024-10-25-3-21-25.png"
+                alt="Admin Dashboard"
+                width={600}
+                height={400}
+                className="rounded-xl w-full transform transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <div className="text-white">
+                  <h3 className="text-2xl font-bold mb-2">Πίνακας Διαχείρισης</h3>
+                  <p className="text-white/80">Ισχυρά εργαλεία για αποτελεσματική διαχείριση της επιχείρησής σας</p>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
